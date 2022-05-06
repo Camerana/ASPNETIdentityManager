@@ -29,7 +29,14 @@ namespace ASPNETIdentityManager
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<UserDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString(ConstantValues.AuthDB)));
+            //sql server funziona
+            services.AddDbContext<UserDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SQLServer")));
+
+            //postgres funziona
+            //services.AddDbContext<UserDBContext>(options => options.UseNpgsql(Configuration.GetConnectionString("Postgres")));
+
+            //sqlite non funziona 
+            //services.AddDbContext<UserDBContext>(options => options.UseSqlite(Configuration.GetConnectionString("SQLite")));
 
             //User Management
             services.AddIdentity<User, IdentityRole>()

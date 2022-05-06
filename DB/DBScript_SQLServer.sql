@@ -21,8 +21,6 @@ CREATE TABLE [dbo].[AspNetUsers](
 	[SecurityStamp] [nvarchar](max) NULL,
 	[TwoFactorEnabled] [bit] NOT NULL,
 	[UserName] [nvarchar](256) NULL,
-	[FirstName] [nvarchar](max) NULL,
-	[LastName] [nvarchar](max) NULL,
  CONSTRAINT [PK_AspNetUsers] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

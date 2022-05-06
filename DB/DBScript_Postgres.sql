@@ -19,10 +19,7 @@ CREATE TABLE "AspNetUsers"(
 	"PhoneNumberConfirmed" boolean NOT NULL,
 	"SecurityStamp" text NULL,
 	"TwoFactorEnabled" boolean NOT NULL,
-	"UserName" text NULL,
-	"FirstName" text NULL,
-	"LastName" text NULL,
-	"CanReceivePrivateMessages" boolean NULL);
+	"UserName" text NULL);
 
 CREATE TABLE "AspNetUserRoles"(
 	"UserId" text NOT NULL, /*era chiave primaria in sql server*/
